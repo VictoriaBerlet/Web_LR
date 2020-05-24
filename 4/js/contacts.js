@@ -1,3 +1,4 @@
+//Создание ajax обработчика
 $(function () {
   $("#contactChoice1").on("click", function () {
     ajaxQuery(1)

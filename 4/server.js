@@ -1,6 +1,8 @@
+// Подключаем  express
 const express = require("express")
+//Инициализируем объект приложения
 const app = express()
-
+// создаём массив данных которые будет возвращать сервер
 const places = [
   {
     id: 1,
@@ -22,15 +24,16 @@ const places = [
   },
 ]
 
+// устанавливаем порт для сервера
 const PORT = process.env.port || 8080
-
+// говорим что приложение будет использовать статические файлы и указываем директорию
 app.use(express.static(__dirname))
-
+// говорим что по маршруту /places/ сервер принимает запрос с параметром в виде id места которое нужно вернуть
 app.get("/places/", function (req, res) {
   let id = req.query.placeId
   res.send(places[id - 1])
 })
-
+//начинаем слушать указанный порт и выводим информацию в консоль
 app.listen(PORT, function () {
   console.log("Server listening on " + PORT)
 })

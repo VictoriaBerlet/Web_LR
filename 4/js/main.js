@@ -1,15 +1,17 @@
+//Инициализация ел. формы
 const form = document.getElementById("form")
 const username = document.getElementById("username")
 const email = document.getElementById("email")
 const password = document.getElementById("password")
 const phone = document.getElementById("telNumber")
-
+//Добавление обработчика на отправку формы
 form.addEventListener("submit", e => {
   e.preventDefault()
   if (checkInputs())
     form.submit()
 })
 
+//Функция валидация ввода
 function checkInputs () {
   // trim to remove the whitespaces
   const usernameValue = username.value.trim()
@@ -54,6 +56,7 @@ function checkInputs () {
   return flag
 }
 
+//Функция для показания ошибки ввода
 function setErrorFor (input, message) {
   const formControl = input.parentElement
   const small = formControl.querySelector("small")
@@ -61,15 +64,18 @@ function setErrorFor (input, message) {
   small.innerText = message
 }
 
+//Ф-я успешной обработки
 function setSuccessFor (input) {
   const formControl = input.parentElement
   formControl.className = "my-form-control success"
 }
 
+//Функция проверки email
 function isEmail (email) {
   return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email)
 }
 
+//Ф-я валидация номера телефона
 function isPhoneNumber (number) {
   return /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/.test(number)
 }
