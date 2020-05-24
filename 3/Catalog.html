@@ -1,0 +1,107 @@
+﻿<html lang = 'en'>
+<head>
+  <meta charset = 'UTF-8'/>
+  
+  <title>Лабораторна робота 2</title>
+  <link href = 'style.css' rel = 'stylesheet' type = 'text/css'/>
+  <link
+      crossorigin = 'anonymous'
+      href = 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'
+      integrity = 'sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh'
+      rel = 'stylesheet'
+  />
+</head>
+<body>
+<nav class = 'navbar navbar-expand-lg navbar-dark nav-ng-pink'>
+  <a class = 'navbar-brand' href = '#'>Каталог</a>
+  
+  <div class = 'collapse navbar-collapse' id = 'navbarSupportedContent'>
+    <ul class = 'navbar-nav mr-auto'>
+      <li class = 'nav-item'>
+        <a class = 'nav-link' href = 'index.html'>Главная</a>
+      </li>
+      <li class = 'nav-item'>
+        <a class = 'nav-link' href = 'Articles.html'>Статті</a>
+      </li>
+      <li class = 'nav-item'>
+        <a class = 'nav-link' href = 'Catalog.html'>Каталог</a>
+      </li>
+      <li class = 'nav-item'>
+        <a class = 'nav-link' href = 'Gallery.html'>Галерея</a>
+      </li>
+      <li class = 'nav-item'>
+        <a class = 'nav-link' href = 'Registration.html'>Реєстрація</a>
+      </li>
+      <li class = 'nav-item'>
+        <a class = 'nav-link' href = 'Contacts.html'>Контакти</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class = 'categories_container'>
+  <ol id = 'ol'>
+    <li>Фаберже</li>
+    <ul id = 'ul'>
+      <li class = 'catalog_new'>Фаберже 1</li>
+      <li>Фаберже 2</li>
+      <li>Фаберже 3</li>
+    </ul>
+    <li>Кулони</li>
+    <ul id = 'ul'>
+      <li>Кулон 1</li>
+      <li class = 'catalog_new'>Кулон 2</li>
+      <li>Кулон 3</li>
+    </ul>
+    <li>Кольє</li>
+    <ul id = 'ul'>
+      <li>Кольє 1</li>
+      <li class = 'catalog_new'>Кольє 2</li>
+      <li>Кольє 3</li>
+    </ul>
+  </ol>
+</div>
+<script src = 'https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+
+<div class = 'categories_container'>
+  <ol class = 'listitems'>
+    <li class = 'list-group-item' data-price = '1203'>Кольє цена = 1203</li>
+    <li class = 'list-group-item' data-price = '832'>Кулон цена = 832</li>
+    <li class = 'list-group-item' data-price = '555'>Кольцо цена = 555</li>
+    <li class = 'list-group-item' data-price = '1850'>Ожерелье цена = 1850</li>
+    <li class = 'list-group-item' data-price = '799'>Брощь цена = 799</li>
+    <li class = 'list-group-item' data-price = '435'>Серьги цена = 435</li>
+  </ol>
+  <button
+      onclick = 'sortListItems()'
+      style = 'width: max-content; height: 50px; margin-left: 40px;'
+  >
+    Сортировать по цене
+  </button>
+</div>
+<script>
+  
+  let order = "ASC"
+  
+  function sortListItems () {
+    if (order === "ASC") {
+      console.log(order)
+      $(".listitems li").sort(sort_li).appendTo(".listitems")
+      order = "DESC"
+      
+    } else if (order === "DESC") {
+      console.log(order)
+      $(".listitems li").sort((a, b) => $(a).data("price") - $(b).data("price")).appendTo(".listitems")
+      order = "ASC"
+    }
+    
+    function sort_li (a, b) {
+      return $(b).data("price") - $(a).data("price")
+    }
+    
+  }
+
+
+</script>
+<div class = 'footer'>Copyright</div>
+</body>
+</html>

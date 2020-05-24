@@ -1,0 +1,82 @@
+﻿<html lang = 'en'>
+<head>
+  <meta charset = 'UTF-8'>
+  <style>
+    #map {
+      height: 400px;
+      width: 400px;
+    }
+  </style>
+  <title> Лабораторна робота 3 </title>
+  <link
+      href = 'style.css'
+      rel = 'stylesheet'
+      type = 'text/css'
+  />
+  <link crossorigin = 'anonymous' href = 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css'
+        integrity = 'sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh'
+        rel = 'stylesheet'>
+</head>
+<body>
+<nav class = 'navbar navbar-expand-lg navbar-dark nav-ng-pink'>
+  <a class = 'navbar-brand' href = '#'>Контакти</a>
+  
+  <div class = 'collapse navbar-collapse' id = 'navbarSupportedContent'>
+    <ul class = 'navbar-nav mr-auto'>
+      
+      <li class = 'nav-item'>
+        <a class = 'nav-link' href = 'index.html'>Главная</a>
+      </li>
+      <li class = 'nav-item'>
+        <a class = 'nav-link' href = 'Articles.html'>Статті</a>
+      </li>
+      <li class = 'nav-item'>
+        <a class = 'nav-link' href = 'Catalog.html'>Каталог</a>
+      </li>
+      <li class = 'nav-item'>
+        <a class = 'nav-link' href = 'Gallery.html'>Галерея</a>
+      </li>
+      <li class = 'nav-item'>
+        <a class = 'nav-link' href = 'Registration.html'>Реєстрація</a>
+      </li>
+      <li class = 'nav-item'>
+        <a class = 'nav-link' href = 'Contacts.html'>Контакти</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div style = 'display: flex; justify-content: center'>
+  <div class = 'categories_container'>
+    <div>
+      <p>
+        <input id = 'contactChoice1' name = 'contact'
+               onclick = 'setCentered(marker1)' type = 'radio'>
+        <label for = 'contactChoice1'>Пункт выдачи №1</label>
+      </p>
+      <p>
+        <input id = 'contactChoice2' name = 'contact'
+               onclick = 'setCentered(marker2)' type = 'radio'>
+        <label for = 'contactChoice2'>Пункт выдачи №2</label>
+      </p>
+      <p>
+        <input id = 'contactChoice3' name = 'contact'
+               onclick = 'setCentered(marker3)' type = 'radio'>
+        <label for = 'contactChoice3'>Пункт выдачи №3</label>
+      </p>
+    </div>
+    <p id = 'map'></p>
+    <script src = 'js/map.js'></script>
+    <script async
+            defer
+            src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyCPsqM_8C9f4c8UiaWJD4Q-KnV7Aw-j2HQ&callback=initMap'></script>
+  </div>
+  <div id = 'info'>
+    <p><b>Информация о пункте:</b></p>
+    <p id = 'place'>Выберите пункт для получения информации</p>
+  </div>
+  <script src = 'jquery.js'></script>
+  <script src = 'js/contacts.js'></script>
+</div>
+<div class = 'footer'>Copyright</div>
+</body>
+</html>

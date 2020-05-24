@@ -1,0 +1,185 @@
+body {
+    background: url(images/background.png) no-repeat right top;
+    background-size: 700px;
+}
+
+h1 {
+    text-align: center;
+    color: purple;
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+}
+
+li a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+    color: white;
+    text-align: left;
+}
+
+.hr li {
+    font-family: cursive;
+    display: inline;
+    margin-right: 5px;
+    border: 1px solid #008008;
+    padding: 3px;
+    text-decoration: none;
+    background: plum;
+}
+
+.thumb img {
+    border: 2px solid #55c5e9; /* Рамка вокруг фотографии */
+    padding: 15px; /* Расстояние от картинки до рамки */
+    background: #666; /* Цвет фона */
+    text-align: center; /* Выравнивание по центру */
+}
+
+#rad {
+    width: max-content;
+    margin-left: 10px;
+}
+
+#rad:hover {
+    border: 1px purple dashed;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.my-form {
+
+    width: 500px;
+    height: 500px;
+    padding: 30px 40px;
+}
+
+.my-form-control {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.my-form-control label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.my-form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 10px;
+    width: 100%;
+}
+
+.my-form-control input:focus {
+    outline: 0;
+    border-color: #777;
+}
+
+.my-form-control.success input {
+    border-color: #2ecc71;
+}
+
+.my-form-control.error input {
+    border-color: #e74c3c;
+}
+
+.my-form-control i {
+    visibility: hidden;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+}
+
+.my-form-control small {
+    color: #e74c3c;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.my-form-control.error small {
+    visibility: visible;
+}
+
+.my-form button {
+    background-color: plum;
+    border: 2px solid #8e44ad;
+    border-radius: 4px;
+    color: #fff;
+    display: block;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 10px;
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+/* SOCIAL PANEL CSS */
+
+.floating-btn {
+    border-radius: 26.5px;
+    background-color: #001F61;
+    border: 1px solid #001F61;
+    box-shadow: 0 16px 22px -17px #03153B;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 12px 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+.floating-btn:hover {
+    background-color: #ffffff;
+    color: #001F61;
+}
+
+.floating-btn:focus {
+    outline: none;
+}
+
+.floating-text {
+    background-color: #001F61;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+    font-family: 'Muli', sans-serif;
+    padding: 7px 15px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 998;
+}
+
+.floating-text a {
+    color: #FF7500;
+    text-decoration: none;
+}
+
+
+.nav-ng-pink {
+    background-color: darkorchid;
+}
